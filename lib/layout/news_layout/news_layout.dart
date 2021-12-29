@@ -18,6 +18,7 @@ class NewsLayout extends StatelessWidget {
 
           appBar: AppBar(
             leading: IconButton(
+              padding: const EdgeInsets.only(left: 30),
               onPressed: (){
                 NewsCubit.get(context).changeAppMode();
               },
@@ -27,10 +28,12 @@ class NewsLayout extends StatelessWidget {
               IconButton(
                   onPressed: () {
                     navigateTo(context, const SearchScreen());
-                  }, icon: const Icon(IconlyBroken.search))
+                  }, icon: const Icon(IconlyBroken.search)),
+              const SizedBox(width: 30,),
+
             ],
             title: Text(NewsCubit.get(context)
-                .appTitle[NewsCubit.get(context).currentIndex]),
+                .appTitle[NewsCubit.get(context).currentIndex],),
           ),
           bottomNavigationBar: ClipRRect(
             borderRadius: const BorderRadius.only(

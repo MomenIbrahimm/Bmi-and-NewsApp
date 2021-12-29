@@ -6,7 +6,10 @@ import 'package:bmi/shared/network/local/cache_helper.dart';
 import 'package:bmi/shared/network/remote/dio_helper.dart';
 import 'package:bmi/shared/style/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'bmi_calculator/bmi_screen.dart';
 
 void main() async{
 
@@ -42,9 +45,10 @@ class MyApp extends StatelessWidget {
         }
       },
       builder: (context,state){
+        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,overlays: []);
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:  const NewsLayout(),
+        home:   const NewsLayout(),
         theme: lightTheme,
         darkTheme: darkTheme,
         themeMode: NewsCubit.get(context).isDark?ThemeMode.dark:ThemeMode.light,
@@ -57,3 +61,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//96C7C1
+//C85C5C
+//90AACB

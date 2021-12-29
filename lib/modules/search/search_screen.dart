@@ -4,6 +4,7 @@ import 'package:bmi/shared/component/component.dart';
 import 'package:buildcondition/buildcondition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -20,8 +21,11 @@ class SearchScreen extends StatelessWidget {
 
         return Scaffold(
           appBar: AppBar(
-            elevation: 0.0,
-            backgroundColor: HexColor('D1E8E4'),
+            leading: IconButton(onPressed: (){
+              Navigator.pop(context);
+            },icon:const Icon(IconlyLight.arrowLeft2) ,padding: const EdgeInsets.only(left: 30),),
+            elevation: 10.0,
+            backgroundColor: HexColor('C85C5C'),
           ),
           body: Padding(
             padding: const EdgeInsets.all(16.0),
